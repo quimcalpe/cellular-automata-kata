@@ -15,14 +15,8 @@ object Automata {
   }
 
   def rule30(s: String): String = s match {
-    case "000" => "0"
-    case "001" => "1"
-    case "010" => "1"
-    case "011" => "1"
-    case "100" => "1"
-    case "101" => "0"
-    case "110" => "0"
-    case "111" => "0"
+    case "000" | "101" | "110" | "111" => "0"
+    case "001" | "010" | "011" | "100" => "1"
   }
 
   def rule90(s: String): String = s match {
